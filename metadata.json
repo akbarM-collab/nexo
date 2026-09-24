@@ -1,0 +1,6 @@
+{
+  "name": "Uangku - Personal Finance & Budgeting",
+  "description": "Balances, cash flow, spending at a glance, multi-account ledger, budgets, debts, goals and financial reports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

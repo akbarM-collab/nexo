@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neutral-950: var(--app-neutral-950);
+  --color-neutral-900: var(--app-neutral-900);
+  --color-neutral-850: var(--app-neutral-850);
+  --color-neutral-800: var(--app-neutral-800);
+  --color-neutral-700: var(--app-neutral-700);
+  --color-neutral-600: var(--app-neutral-600);
+  --color-neutral-500: var(--app-neutral-500);
+  --color-neutral-400: var(--app-neutral-400);
+  --color-neutral-300: var(--app-neutral-300);
+  --color-neutral-200: var(--app-neutral-200);
+  --color-neutral-100: var(--app-neutral-100);
+  --color-neutral-50: var(--app-neutral-50);
+}
+
+:root,
+html.theme-dark {
+  --app-neutral-950: #09090b;
+  --app-neutral-900: #121215;
+  --app-neutral-850: #18181b;
+  --app-neutral-800: #27272a;
+  --app-neutral-700: #3f3f46;
+  --app-neutral-600: #52525b;
+  --app-neutral-500: #71717a;
+  --app-neutral-400: #a1a1aa;
+  --app-neutral-300: #d4d4d8;
+  --app-neutral-200: #e4e4e7;
+  --app-neutral-100: #f4f4f5;
+  --app-neutral-50: #ffffff;
+  color-scheme: dark;
+}
+
+html.theme-light {
+  --app-neutral-950: #f8fafc;
+  --app-neutral-900: #ffffff;
+  --app-neutral-850: #f1f5f9;
+  --app-neutral-800: #e2e8f0;
+  --app-neutral-700: #cbd5e1;
+  --app-neutral-600: #94a3b8;
+  --app-neutral-500: #64748b;
+  --app-neutral-400: #475569;
+  --app-neutral-300: #334155;
+  --app-neutral-200: #1e293b;
+  --app-neutral-100: #0f172a;
+  --app-neutral-50: #020617;
+  color-scheme: light;
+}
+
+html.theme-earth {
+  --app-neutral-950: #f4eee5;
+  --app-neutral-900: #fcfaf7;
+  --app-neutral-850: #ebe3d5;
+  --app-neutral-800: #dfd3c3;
+  --app-neutral-700: #cec0ad;
+  --app-neutral-600: #a3937f;
+  --app-neutral-500: #7a6b5a;
+  --app-neutral-400: #5c4e3f;
+  --app-neutral-300: #42362b;
+  --app-neutral-200: #2c221a;
+  --app-neutral-100: #1a130e;
+  --app-neutral-50: #0d0906;
+  color-scheme: light;
+}
+
+:root {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  background-color: var(--app-neutral-950);
+  color: var(--app-neutral-100);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(160, 160, 160, 0.2);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(160, 160, 160, 0.35);
+}
+
+/* Enhancements for light and earth tone form inputs & selectors */
+html.theme-light input:not([type="checkbox"]):not([type="radio"]),
+html.theme-light select,
+html.theme-light textarea {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+html.theme-earth input:not([type="checkbox"]):not([type="radio"]),
+html.theme-earth select,
+html.theme-earth textarea {
+  background-color: #fcfaf7;
+  color: #1a130e;
+  border-color: #cec0ad;
+}
+
+/* Light / Earth tone modal backdrop */
+html.theme-light .bg-black\/60,
+html.theme-light .bg-black\/70,
+html.theme-light .bg-black\/80 {
+  background-color: rgba(15, 23, 42, 0.5) !important;
+}
+
+html.theme-earth .bg-black\/60,
+html.theme-earth .bg-black\/70,
+html.theme-earth .bg-black\/80 {
+  background-color: rgba(44, 34, 26, 0.55) !important;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
